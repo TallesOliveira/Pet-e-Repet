@@ -1,0 +1,528 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    color:#fff ;
+    text-decoration: none;
+    transition: 0.3s;
+}
+a:houver {
+    opacity: 0.7;
+}
+.logo{
+    display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+.logo img{
+    width: 82px; /* Ajuste o tamanho da imagem conforme necessário */
+  margin-right: 10px; /* Ajuste o espaçamento entre a imagem e o texto conforme necessário */
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #E37D05;
+    height: 8vh;
+}
+
+.nav-list{
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li{
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+.mobile-menu{
+    display: none;
+    cursor: pointer;
+}
+.mobile-menu div{
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+@media (max-width: 999px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-list{
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vw;
+        height: 92vh;
+        background-color:#E37D05 ;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+    .nav-list li{
+        margin-left: 0;
+        opacity: 0;
+    }
+    .mobile-menu{
+        display: block;
+    }
+    
+}
+.nav-list.active{
+    transform: translateX(0);
+}
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu.active .line1{
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+.mobile-menu.active .line2{
+    opacity: 0;
+}
+.mobile-menu.active .line3{
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+.h1-inicio{
+    font-family:normal 15pt Arial ;
+    padding-bottom: 20px;
+    
+}
+.h3-inicio{
+    padding-bottom: 4px;
+}
+
+
+.container img{
+  padding: 1px;
+}
+
+.content{
+    flex: 1;
+    max-width: 40vw; /* Adicione um limite de largura para o contêiner de texto */
+    padding: 20px; /* Ajuste o preenchimento conforme necessário */
+    box-sizing: border-box; /* Inclui o preenchimento no cálculo da largura total */
+    word-wrap: break-word; /* Quebra de palavra */
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+.inicio{
+    background-color: white;
+    padding: 20px;
+    margin: auto;
+    border-radius: 7px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 90%; /* Ajuste a largura conforme necessário */
+    max-width: 1200px; /* Defina uma largura máxima se desejar */
+    height: 85.8vh;
+   
+}
+.h1-inicio{
+    padding-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#E37D05 ;
+}
+.h2-inicio{
+    text-align: justify;
+    padding-bottom: 50px;
+}
+
+.text-inicio{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    background-color: #E37D05;
+    color: white;
+    padding: 6px;
+    text-align: justify;
+    border-radius: 6px;
+    text-align: center;
+}
+body{
+    background-color: #914f04;
+}
+
+.horario{
+    background-color: white;
+  padding: 20px;
+  margin: auto;
+  border-radius: 7px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 90%; /* Ajuste a largura conforme necessário */
+  max-width: 1200px; /* Defina uma largura máxima se desejar */
+  height: 85.8vh;
+}
+
+.h1-horario{
+    padding-bottom: 140px;
+    text-align: center;
+}
+.container-hora{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.box-horario{
+    padding: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    background-color:#E37D05 ;
+    border-radius: 10px;
+    
+}
+.p-sobre{
+    padding-bottom: 3px;
+    text-align: justify;
+    max-width: 90vw;
+    word-wrap: break-word;
+    font-size: 16px;
+}
+.endereço{
+    background-color: white;
+  padding: 20px;
+  margin: auto;
+  border-radius: 7px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 90%; /* Ajuste a largura conforme necessário */
+  max-width: 1200px; /* Defina uma largura máxima se desejar */
+  height: 85.8vh;
+    
+}
+
+
+.container-end{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.h1-endereço{
+    padding-bottom: 6px;
+}
+.p-endereço{
+    padding-bottom:70px ;
+    text-align: justify;
+}
+.contato{
+    background-color: white;
+  padding: 20px;
+  margin: auto;
+  border-radius: 7px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 90%; /* Ajuste a largura conforme necessário */
+  max-width: 1200px; /* Defina uma largura máxima se desejar */
+  height: 95vh;
+}
+.container-con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.card-insta{
+    background: linear-gradient(to bottom,#7E3AB1 , #CB2668,#F80404,#F65602,#F5D75D);
+    width: 350px;
+    height: 150px;
+    border-radius: 15px;
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+.p-contato{
+    padding: 5px;
+    padding-bottom: 10px;
+    padding-top: 30px;
+}
+.card-whats{
+    background-color:#25D366 ;
+    width: 350px;
+    height: 150px;
+    border-radius: 15px;
+    padding: 10px;
+    
+    text-align: center;
+}
+
+@media(max-width:768px){
+    body{
+        overflow: hidden;
+    }
+    .box-horario{
+        padding: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    background-color:#E37D05 ;
+    border-radius: 10px;
+    }
+    .text-inicio{
+        text-align: center;
+    }
+}
+@media (max-width: 999px) and (orientation: landscape){
+    .body{
+        overflow-y: scroll;
+    }
+    .logo img{
+        width: 50px;
+    }
+    .inicio{
+        height: 120vh;
+    }
+    .text-inicio{
+        text-align: center;
+    }
+    .nav-list{
+        height:132vh ;
+        width: 40vw;
+    }
+    .horario{
+        height:120vh ;
+    }
+    .h1-horario{
+        padding-bottom: 100px;
+    }
+    .endereço{
+        height:120vh ;
+    }
+    .contato{
+        height: 170vh;
+        
+    }
+    .contact-nav .nav-list {
+        height: 181vh;
+    }
+}
+@media(max-width:767px){
+    body{
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+    .h1-inicio{
+        text-align: center;
+       
+    }
+    .card-whats{
+        width:320px ;
+    }
+    .card-insta{
+        width: 320px;
+    }
+}
+@media (max-width: 767px) and (orientation: landscape){
+    .inicio{
+        height: 140vh;
+    }
+    .h2-inicio{
+        text-align: center;
+    }
+    .contact-inicio .nav-list{
+        height: 152vh;
+    }
+    .contato{
+        height: 165vh;
+    }
+    .contact-nav .nav-list{
+        height: 177vh;
+    }
+}
+@media(min-width:912px) and (max-width:913px){
+    .h1-inicio{
+        
+        font-size:50px ;
+    }
+    .logo img{
+        width:120px ;
+    }
+    .nome-nav{
+        font-size: 30px;
+    }
+    .container{
+        padding-top: 100px;
+    }
+    .container img{
+        width: 450px;
+    }
+    .h2-inicio{
+        font-size: 40px;
+        text-align: center;
+    }
+    .p-inicio{
+        font-size: 35px;
+        text-align: center;
+       
+    }
+    .nav-list{
+        font-size: 30px;
+    }
+    .h1-horario{
+        font-size: 50px;
+        padding-bottom: 300px;
+    }
+    .box-horario{
+        padding: 40px;
+        font-size: 35px;
+    }
+    .container-hora img{
+        width: 250px;
+    }
+    .h1-endereço{
+        font-size: 50px;
+    }
+    .p-endereço{
+        font-size: 35px;
+        text-align: center;
+    }
+    .container-end img{
+        width:500px ;
+    }
+    .h1-contato{
+        font-size: 50px;
+        
+    }
+    .p-contato{
+        font-size: 30px;
+    }
+    .card-insta img{
+        width: 180px;
+        
+    }
+    .card-insta{
+        padding-bottom: 50px;
+        width: 500px;
+    }
+    .card-whats img{
+        width:180px ;
+    }
+    .card-whats{
+        padding-bottom: 50px;
+        width:500px ;
+    }
+    .contato{
+        height:88vh ;
+    }
+    .contact-nav .nav-list{
+        height: 92vh;
+    } /* fazer o celular deitado nessa largura Surface pro 7 */
+}
+
+
+
+@media(min-width: 646px) and (max-width: 647px){
+    
+    .inicio{
+        height: 170vh;
+    }
+    .h2-inicio{
+        text-align: center;
+    }
+    .contact-inicio .nav-list{
+        height: 185vh;
+    }
+    .endereço{
+        height:140vh ;
+    }
+    .contact-end .nav-list{
+        height: 154vh;
+    }
+    .contato{
+        height: 215vh;
+    }
+    .contact-nav .nav-list{
+        height: 229vh;
+    }
+}
+@media(min-width: 280px) and (max-width: 281px){
+   
+    .box-horario{
+        font-size: 12px;
+    }
+    .container-hora img{
+        width: 100px;
+    }
+    .card-insta{
+        width: 220px;
+    }
+    .card-whats{
+        width: 220px;
+    }
+    .contact-nav .nav-list{
+        height: 101vh;
+    }
+}
+@media(min-width: 653px) and (max-width: 654px){
+    
+    .inicio{
+        height: 170vh;
+    }
+    .logo img{
+        height: 10vh;
+    }
+    .contact-inicio{
+        height: 10vh;
+    }
+    .contact-inicio .nav-list{
+        height: 187vh;
+    }
+    .horario{
+        height:150vh ;
+    }
+    .contact-hora{
+        height: 10vh;
+    }
+    .contact-hora .nav-list{
+        height: 167vh;
+    }
+    .endereço{
+        height: 170vh;
+    }
+    .contact-end{
+        height: 10vh;
+    }
+    .contact-end .nav-list{
+        height: 187vh;
+    }
+    .contato{
+        height: 230vh;
+    }
+    .contact-nav{
+        height: 10vh;
+    }
+    .contact-nav .nav-list{
+        height: 247vh;
+    }
+}
+@media(min-width: 1024px) and (max-width: 1025px){
+    .contato{
+        height: 110vh;
+    }
+}
